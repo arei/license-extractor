@@ -1,5 +1,8 @@
 /*
 	Recursively walk your project and find all license files.
+
+	Copyright 2014, Glen R. Goodwin
+
  */
 
 "use strict";

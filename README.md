@@ -1,5 +1,4 @@
 # license-extractor
----------------------
 
 ## Purpose
 
