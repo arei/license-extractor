@@ -1,0 +1,43 @@
+{
+  "author": "Glen R. Goodwin (http://www.arei.net)",
+  "name": "license-extractor",
+  "keywords": [
+    "license",
+    "license extract",
+    "legal",
+    "legal extract",
+    "licensing",
+    "licensing extract"
+  ],
+  "description": "Recursively walk your project and get a copy of all sub-project license files.  This is great for cases where Legal asks you for a list of all the licenses you are using in your project.",
+  "version": "1.0.0",
+  "homepage": "http://github.com/arei/license-extractor",
+  "bugs": {
+    "url": "http://github.com/arei/license-extractor/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/arei/license-extractor/blob/master/LICENSE.txt"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/arei/license-extractor.git"
+  },
+  "main": "index.js",
+  "bin": {
+    "licext": "./bin/licext"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "findit": "^2.0.0",
+    "minimist": "^1.1.0",
+    "mkdirp": "^0.5.0",
+    "rimraf": "^2.2.8"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
