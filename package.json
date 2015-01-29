@@ -10,7 +10,7 @@
     "licensing extract"
   ],
   "description": "Recursively walk your project and get a copy of all sub-project license files.  This is great for cases where Legal asks you for a list of all the licenses you are using in your project.",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "homepage": "http://github.com/arei/license-extractor",
   "bugs": {
     "url": "http://github.com/arei/license-extractor/issues"
