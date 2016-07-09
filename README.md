@@ -9,7 +9,7 @@ License-Extractor is a tool for extracting and recording all of the license file
 ## Installation
 
 ```shell
-npm install licesne-extractor
+npm install license-extractor
 ```
 
 ## Usage
