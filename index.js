@@ -171,19 +171,18 @@ var find = function() {
 	});
 
 	findit.on("end",function(){
-		console.log(licenses);
 		var packageDeps = require(Path.resolve(source, './package.json')).dependencies;
 
 		if (dependencies) {
 			var temp = [];
 			Object.keys(packageDeps).forEach(x => {
 				licenses.forEach(y => {
-					if (x.includes(y)) temp.push(y);
+					if (y.includes(x)) temp.push(y);
 				})
 			});
 
 			licenses = temp;
-			console.log(temp);
+			
 		}
 		consume();
 	});
