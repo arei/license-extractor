@@ -14,7 +14,7 @@ var Mkdirp = require("mkdirp");
 var Path = require("path");
 
 var args = require("minimist")(process.argv.slice(2),{
-	string: ["source","target","mode"],
+	string: ["source","target","mode", "dependencies"],
 	boolean: ["overwrite","noheaders"],
 	default: {
 		source: ".",
@@ -32,6 +32,7 @@ var LICENSE_FILE_MATCHERS = [
 var source = args.source;
 var mode = args.mode.toLowerCase();
 var target = Path.resolve(args.target);
+var dependencies = ("dependencies" in args);
 var licenses = [];
 
 if (mode!=="merge" && mode!=="collect" && mode!=="output") mode = "output";
@@ -143,10 +144,12 @@ var prepare = function() {
 	if (mode==="output") prepareOutput();
 	if (mode==="collect") prepareCollect();
 	if (mode==="merge") prepareMerge();
+
 };
 
 var find = function() {
 	var findit = FindIt(source);
+
 
 	findit.on("file",function(file){
 		var resfile = Path.resolve(source,file);
@@ -168,6 +171,20 @@ var find = function() {
 	});
 
 	findit.on("end",function(){
+		console.log(licenses);
+		var packageDeps = require(Path.resolve(source, './package.json')).dependencies;
+
+		if (dependencies) {
+			var temp = [];
+			Object.keys(packageDeps).forEach(x => {
+				licenses.forEach(y => {
+					if (x.includes(y)) temp.push(y);
+				})
+			});
+
+			licenses = temp;
+			console.log(temp);
+		}
 		consume();
 	});
 };
