@@ -15,7 +15,7 @@ var Path = require("path");
 
 var args = require("minimist")(process.argv.slice(2),{
 	string: ["source","target","mode"],
-	boolean: ["overwrite","noheaders", "dependencies"],
+	boolean: ["overwrite","noheaders","dependencies"],
 	default: {
 		source: ".",
 		target: "./LICENSES",
