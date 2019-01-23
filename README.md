@@ -37,6 +37,8 @@ licext [--mode output] [--source [dir]] [--noheaders]
 
 `--noheaders` turns off the header information output before each license file.
 
+`--dependencies` tells license-extractor to only read licenses specified in the `package.json`'s `dependencies` property.
+
 ### Merge Mode Usage
 
 Merge mode reads in each license and outputs the contents and some header info to the `--target` file.
