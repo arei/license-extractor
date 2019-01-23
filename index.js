@@ -33,7 +33,6 @@ var LICENSE_FILE_MATCHERS = [
 var source = args.source;
 var mode = args.mode.toLowerCase();
 var target = Path.resolve(args.target);
-// var dependencies = ("dependencies" in args);
 var licenses = [];
 
 if (mode!=="merge" && mode!=="collect" && mode!=="output") mode = "output";
@@ -185,8 +184,7 @@ var find = function() {
 			licenses = temp;
 			
 		}
-		console.log(licenses);
-		// consume();
+		consume();
 	});
 };
 
