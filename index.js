@@ -144,12 +144,10 @@ var prepare = function() {
 	if (mode==="output") prepareOutput();
 	if (mode==="collect") prepareCollect();
 	if (mode==="merge") prepareMerge();
-
 };
 
 var find = function() {
 	var findit = FindIt(source);
-
 
 	findit.on("file",function(file){
 		var resfile = Path.resolve(source,file);
@@ -171,11 +169,11 @@ var find = function() {
 	});
 
 	findit.on("end",function(){
-		var packageDeps = require(Path.resolve(source, './package.json')).dependencies;
+		var dependencies = require(Path.resolve(source, './package.json')).dependencies;
 
 		if (args.dependencies) {
 			var temp = [];
-			Object.keys(packageDeps).forEach(x => {
+			Object.keys(dependencies).forEach(x => {
 				licenses.forEach(y => {
 					if (y.includes(x)) temp.push(y);
 				})
