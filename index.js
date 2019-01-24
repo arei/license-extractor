@@ -173,9 +173,9 @@ var find = function() {
 
 		if (args.dependencies) {
 			var temp = [];
-			Object.keys(dependencies).forEach(x => {
-				licenses.forEach(y => {
-					if (y.includes(x)) temp.push(y);
+			Object.keys(dependencies).forEach(dependency => {
+				licenses.forEach(license => {
+					if (license.includes(dependency)) temp.push(license);
 				})
 			});
 
