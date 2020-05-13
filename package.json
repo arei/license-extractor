@@ -1,6 +1,8 @@
 {
+  "version": "0.0.0-beta.1",
   "author": "Glen R. Goodwin (http://www.arei.net)",
-  "name": "license-extractor",
+  "name": "dependency-license-extractor",
+  "description": "Recursively walk your project and get a copy of all sub-project license files.  This is great for cases where Legal asks you for a list of all the licenses you are using in your project.",
   "keywords": [
     "license",
     "license extract",
@@ -9,21 +11,19 @@
     "licensing",
     "licensing extract"
   ],
-  "description": "Recursively walk your project and get a copy of all sub-project license files.  This is great for cases where Legal asks you for a list of all the licenses you are using in your project.",
-  "version": "1.0.4",
-  "homepage": "http://github.com/arei/license-extractor",
+  "homepage": "http://github.com/dawidrylko/license-extractor",
   "bugs": {
-    "url": "http://github.com/arei/license-extractor/issues"
+    "url": "https://github.com/dawidrylko/license-extractor/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/arei/license-extractor/blob/master/LICENSE.txt"
+      "url": "https://github.com/dawidrylko/license-extractor/blob/master/LICENSE.txt"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/arei/license-extractor.git"
+    "url": "git://github.com/dawidrylko/license-extractor"
   },
   "main": "index.js",
   "bin": {
@@ -34,10 +34,8 @@
   },
   "dependencies": {
     "findit": "^2.0.0",
-    "minimist": "^1.1.0",
+    "minimist": "^1.2.5",
     "mkdirp": "^0.5.0",
     "rimraf": "^2.2.8"
-  },
-  "devDependencies": {},
-  "optionalDependencies": {}
+  }
 }
